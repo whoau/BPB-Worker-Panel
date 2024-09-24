@@ -4234,7 +4234,7 @@ async function getSingboxConfig (env, hostName, client, warpType) {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        "www.speedtest.net,
+        "www.speedtest.net",
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
         ...(cleanIPs ? cleanIPs.split(",") : [])
