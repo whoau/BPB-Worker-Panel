@@ -3375,7 +3375,7 @@ async function getNormalConfigs(env, hostName, client) {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        'www.speedtest.net',
+        'www.visa.com',
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
         ...(cleanIPs ? cleanIPs.split(',') : [])
