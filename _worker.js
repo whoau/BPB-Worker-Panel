@@ -2964,7 +2964,7 @@ async function buildXrayDNSObject (remoteDNS, localDNS, blockAds, bypassIran, by
     if (isWorkerLess) {
         const resolvedDOH = await resolveDNS(dohHost);
         const resolvedCloudflare = await resolveDNS('cloudflare.com');
-        const resolvedCLDomain = await resolveDNS('www.speedtest.net.cdn.cloudflare.net');
+        const resolvedCLDomain = await resolveDNS('www.visa.com.cdn.cloudflare.net');
         const resolvedCFNS_1 = await resolveDNS('ben.ns.cloudflare.com');
         const resolvedCFNS_2 = await resolveDNS('lara.ns.cloudflare.com');
         dnsObject.hosts['cloudflare-dns.com'] = [
@@ -3451,7 +3451,7 @@ async function getFragmentConfigs(env, hostName, client) {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        "www.speedtest.net",
+        "www.visa.com",
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
         ...(cleanIPs ? cleanIPs.split(",") : [])
@@ -3799,7 +3799,7 @@ async function getClashConfig (env, hostName, isWarp) {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        "www.speedtest.net",
+        "www.visa.com",
         ...resolved.ipv4,
         ...resolved.ipv6,
         ...(cleanIPs ? cleanIPs.split(",") : [])
@@ -4234,7 +4234,7 @@ async function getSingboxConfig (env, hostName, client, warpType) {
     const resolved = await resolveDNS(hostName);
     const Addresses = [
         hostName,
-        "www.speedtest.net",
+        "www.visa.com,
         ...resolved.ipv4,
         ...resolved.ipv6.map((ip) => `[${ip}]`),
         ...(cleanIPs ? cleanIPs.split(",") : [])
